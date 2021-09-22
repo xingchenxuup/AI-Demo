@@ -1,7 +1,7 @@
 ﻿public enum EnemyType
 {
     Standstill,
-    Range,
-    Line,
-    Random,
+    WanderInRange,
+    WanderInLine,
+    Wander,
 }
