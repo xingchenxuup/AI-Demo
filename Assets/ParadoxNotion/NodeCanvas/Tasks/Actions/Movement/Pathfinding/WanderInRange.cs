@@ -13,10 +13,13 @@ namespace NodeCanvas.Tasks.Actions
     [Description("指定范围移动")]
     public class WanderInRange : ActionTask<NavMeshAgent>
     {
+        //巡逻速度
         public BBParameter<float> speed = 4;
-        // public BBParameter<float> keepDistance = 0.1f;
+        //巡逻起始点
         public BBParameter<Vector3> targetPos;
+        //巡逻半径
         public BBParameter<float> wanderDistance = 20;
+        //点位停留时间
         public BBParameter<float> delay = 0;
         public bool repeat = true;
 

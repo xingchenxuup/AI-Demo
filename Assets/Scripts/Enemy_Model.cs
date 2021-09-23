@@ -38,4 +38,11 @@ public class Enemy_Model : MonoBehaviour
     {
         Gizmos.DrawWireSphere(rootPos,wanderDistance);
     }
+
+
+    public int Attack()
+    {
+        Debug.Log("attack");
+        return 1;
+    }
 }
