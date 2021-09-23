@@ -1,30 +1,40 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class Enemy_Model : MonoBehaviour
 {
 
-    // public Test test;
+    [Title("基础属性")]
     public EnemyType EnemyType;
-
-    [Header("巡逻相关")]
-    public float minWanderDistance = 5;
-    public float wanderDistance = 20f;
-    public float keepDistance = 0.1f;
-    public float delay = 0f;
-    public float wanderSpeed;
-    public Vector3 rootPos;
+    // 当前位置
     public Vector3 currentPos
     {
         get => transform.position;
     }
+    
+    [Title("巡逻相关")]
+    [LabelText("巡逻移动最短距离")]
+    public float minWanderDistance = 5;
+    [LabelText("巡逻移动范围直径")]
+    public float wanderDistance = 20f;
+    [LabelText("巡逻点停止距离")]
+    public float keepDistance = 0.1f;
+    [LabelText("巡逻点停留时间")]
+    public float delay = 0f;
+    [LabelText("巡逻速度")]
+    public float wanderSpeed;
+    [LabelText("巡逻范围中心点")][ReadOnly]
+    public Vector3 rootPos;
 
-    [Header("追击相关")] 
+    [Title("追击相关")]
+    [LabelText("追击速度")]
     public float pursueSpeed;
     
-    [Header("攻击相关")]
+    [Title("攻击相关")]
+    [LabelText("攻击冷却")]
     public float attackCooling;
     void Start()
     {
