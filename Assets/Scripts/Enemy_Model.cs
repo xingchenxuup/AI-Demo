@@ -23,6 +23,9 @@ public class Enemy_Model : MonoBehaviour
 
     [Header("追击相关")] 
     public float pursueSpeed;
+    
+    [Header("攻击相关")]
+    public float attackCooling;
     void Start()
     {
         rootPos = transform.position;
@@ -40,9 +43,8 @@ public class Enemy_Model : MonoBehaviour
     }
 
 
-    public int Attack()
+    public void Attack()
     {
         Debug.Log("attack");
-        return 1;
     }
 }

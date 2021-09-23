@@ -4517,7 +4517,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _serializedExposedParameters: []
-  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_nestedBT":{"_value":1},"_name":"\u5de1\u903b","_tag":"patrol","_position":{"x":524.0,"y":87.0},"$type":"NodeCanvas.StateMachines.NestedBTState","$id":"0"},{"_nestedBT":{"_value":2},"_name":"\u8ffd\u51fb","_tag":"pursue","_position":{"x":737.0,"y":273.0},"$type":"NodeCanvas.StateMachines.NestedBTState","$id":"1"},{"_conditionList":{"conditions":[{"variable":{"_name":"GB/Player","_targetVariableID":"2ca7f6c9-d3ae-4ce7-9859-b8dac5ceb363"},"$type":"NodeCanvas.Tasks.Conditions.CheckNull"}]},"_actionList":{"executionMode":1,"actions":[{"target":{"_name":"GB/Player","_targetVariableID":"2ca7f6c9-d3ae-4ce7-9859-b8dac5ceb363"},"saveAs":{"_name":"Distance","_targetVariableID":"69281e3c-5ae7-4c9b-b2e7-e007ad089522"},"_isDisabled":true,"$type":"NodeCanvas.Tasks.Actions.GetDistance"},{"log":{"_value":"fsm\u5e76\u884c"},"$type":"NodeCanvas.Tasks.Actions.DebugLogText"}]},"_position":{"x":999.0,"y":292.0},"$type":"NodeCanvas.StateMachines.ConcurrentState"}],"connections":[{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{"Distance":{"_name":"Distance","_id":"69281e3c-5ae7-4c9b-b2e7-e007ad089522","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_nestedBT":{"_value":1},"_name":"\u5de1\u903b","_tag":"patrol","_position":{"x":524.0,"y":87.0},"$type":"NodeCanvas.StateMachines.NestedBTState","$id":"0"},{"_nestedBT":{"_value":2},"_name":"\u8ffd\u51fb","_tag":"pursue","_position":{"x":736.0,"y":277.0},"$type":"NodeCanvas.StateMachines.NestedBTState","$id":"1"},{"_conditionList":{"conditions":[{"variable":{"_name":"GB/Player","_targetVariableID":"2ca7f6c9-d3ae-4ce7-9859-b8dac5ceb363"},"$type":"NodeCanvas.Tasks.Conditions.CheckNull"}]},"_actionList":{"executionMode":1,"actions":[{"target":{"_name":"GB/Player","_targetVariableID":"2ca7f6c9-d3ae-4ce7-9859-b8dac5ceb363"},"saveAs":{"_name":"Distance","_targetVariableID":"69281e3c-5ae7-4c9b-b2e7-e007ad089522"},"_isDisabled":true,"$type":"NodeCanvas.Tasks.Actions.GetDistance"},{"log":{"_value":"fsm\u5e76\u884c"},"$type":"NodeCanvas.Tasks.Actions.DebugLogText"}]},"_position":{"x":999.0,"y":292.0},"$type":"NodeCanvas.StateMachines.ConcurrentState"}],"connections":[{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{"Distance":{"_name":"Distance","_id":"69281e3c-5ae7-4c9b-b2e7-e007ad089522","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}}}}'
   _boundGraphObjectReferences:
   - {fileID: 0}
@@ -4527,7 +4527,7 @@ MonoBehaviour:
     _version: 3.21
     _category: 
     _comments: 
-    _translation: {x: 0, y: 0}
+    _translation: {x: -155, y: 35}
     _zoomFactor: 1
   _firstActivation: 0
   _enableAction: 0
@@ -4572,6 +4572,7 @@ MonoBehaviour:
   wanderSpeed: 5
   rootPos: {x: 0, y: 0, z: 0}
   pursueSpeed: 0
+  attackCooling: 0
 --- !u!195 &1642680474
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4873,7 +4874,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1814922972}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.91, y: 0.34, z: -15.6}
+  m_LocalPosition: {x: 3.9, y: 0.34, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
