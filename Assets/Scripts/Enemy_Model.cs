@@ -16,6 +16,11 @@ public class Enemy_Model : MonoBehaviour
     public float delay = 0f;
     public float wanderSpeed;
     public Vector3 rootPos;
+    public Vector3 currentPos
+    {
+        get => transform.position;
+    }
+
     [Header("追击相关")] 
     public float pursueSpeed;
     void Start()

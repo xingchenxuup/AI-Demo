@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -990,7 +990,6 @@ GameObject:
   - component: {fileID: 474453071}
   - component: {fileID: 474453070}
   - component: {fileID: 474453069}
-  - component: {fileID: 474453073}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -1105,18 +1104,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &474453073
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 474453068}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57ee847acab9c7f47aea17394beab14d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &475030416
 GameObject:
   m_ObjectHideFlags: 0
@@ -3158,11 +3145,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _parentBlackboard: {fileID: 0}
   _serializedBlackboard: '{"_variables":{"CanSeePlayer":{"_name":"CanSeePlayer","_id":"df7fab73-a8b1-4dfc-b6f7-fb39f7018e13","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
-    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}}}'
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"TargetPos":{"_propertyPath":"Enemy_Model.rootPos","_name":"TargetPos","_id":"5210d568-2876-46c6-aa4b-9e8916573c39","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Vector3,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}}}'
   _objectReferences: []
   _serializedVariables:
   - _json: '{"_name":"CanSeePlayer","_id":"df7fab73-a8b1-4dfc-b6f7-fb39f7018e13","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references: []
+  - _json: '{"_propertyPath":"Enemy_Model.rootPos","_name":"TargetPos","_id":"5210d568-2876-46c6-aa4b-9e8916573c39","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Vector3,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
     _references: []
 --- !u!114 &1642680471
 MonoBehaviour:
@@ -3177,13 +3168,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _serializedExposedParameters: []
-  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_nestedBT":{"_value":1},"_name":"\u5de1\u903b","_tag":"patrol","_position":{"x":355.0,"y":167.0},"$type":"NodeCanvas.StateMachines.NestedBTState","$id":"0"},{"_nestedBT":{"_value":2},"_name":"\u8ffd\u51fb","_tag":"pursue","_position":{"x":598.0,"y":312.0},"$type":"NodeCanvas.StateMachines.NestedBTState","$id":"1"},{"_nestedBT":{"_value":3},"_name":"\u653b\u51fb","_tag":"attack","_position":{"x":824.0,"y":490.0},"$type":"NodeCanvas.StateMachines.NestedBTState","$id":"2"},{"_conditionList":{"conditions":[{"variable":{"_name":"GB/Player","_targetVariableID":"2ca7f6c9-d3ae-4ce7-9859-b8dac5ceb363"},"$type":"NodeCanvas.Tasks.Conditions.CheckNull"}]},"_actionList":{"executionMode":1,"actions":[{"target":{"_name":"GB/Player","_targetVariableID":"2ca7f6c9-d3ae-4ce7-9859-b8dac5ceb363"},"saveAs":{"_name":"Distance","_targetVariableID":"69281e3c-5ae7-4c9b-b2e7-e007ad089522"},"_isDisabled":true,"$type":"NodeCanvas.Tasks.Actions.GetDistance"},{"log":{"_value":"fsm\u5e76\u884c"},"$type":"NodeCanvas.Tasks.Actions.DebugLogText"}]},"_position":{"x":999.0,"y":292.0},"$type":"NodeCanvas.StateMachines.ConcurrentState"}],"connections":[{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{"Distance":{"_name":"Distance","_id":"69281e3c-5ae7-4c9b-b2e7-e007ad089522","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_nestedBT":{"_value":1},"_name":"\u5de1\u903b","_tag":"patrol","_position":{"x":524.0,"y":87.0},"$type":"NodeCanvas.StateMachines.NestedBTState","$id":"0"},{"_nestedBT":{"_value":2},"_name":"\u8ffd\u51fb","_tag":"pursue","_position":{"x":737.0,"y":273.0},"$type":"NodeCanvas.StateMachines.NestedBTState","$id":"1"},{"_conditionList":{"conditions":[{"variable":{"_name":"GB/Player","_targetVariableID":"2ca7f6c9-d3ae-4ce7-9859-b8dac5ceb363"},"$type":"NodeCanvas.Tasks.Conditions.CheckNull"}]},"_actionList":{"executionMode":1,"actions":[{"target":{"_name":"GB/Player","_targetVariableID":"2ca7f6c9-d3ae-4ce7-9859-b8dac5ceb363"},"saveAs":{"_name":"Distance","_targetVariableID":"69281e3c-5ae7-4c9b-b2e7-e007ad089522"},"_isDisabled":true,"$type":"NodeCanvas.Tasks.Actions.GetDistance"},{"log":{"_value":"fsm\u5e76\u884c"},"$type":"NodeCanvas.Tasks.Actions.DebugLogText"}]},"_position":{"x":999.0,"y":292.0},"$type":"NodeCanvas.StateMachines.ConcurrentState"}],"connections":[{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{"Distance":{"_name":"Distance","_id":"69281e3c-5ae7-4c9b-b2e7-e007ad089522","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}}}}'
   _boundGraphObjectReferences:
   - {fileID: 0}
   - {fileID: 11400000, guid: 824ccbbc9f122124387482317eaae381, type: 2}
   - {fileID: 11400000, guid: 04a8c82355e4d8d48a4ff4196daba454, type: 2}
-  - {fileID: 11400000, guid: 525e1e659f284c243bdf854783b6fa8f, type: 2}
   _boundGraphSource:
     _version: 3.21
     _category: 
@@ -3226,11 +3216,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyType: 1
-  minWanderDistance: 5
-  wanderDistance: 10
+  minWanderDistance: 3
+  wanderDistance: 20
   keepDistance: 0.1
   delay: 0
-  wanderSpeed: 3
+  wanderSpeed: 5
   rootPos: {x: 0, y: 0, z: 0}
   pursueSpeed: 0
 --- !u!195 &1642680474
@@ -3439,7 +3429,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1814922972}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.85, y: 0.34, z: 0}
+  m_LocalPosition: {x: -0.1, y: 0.34, z: 11.92}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
