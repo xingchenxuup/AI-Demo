@@ -1965,7 +1965,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &578297576
 Transform:
   m_ObjectHideFlags: 0
@@ -5437,6 +5437,7 @@ MonoBehaviour:
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"TargetPos":{"_propertyPath":"Enemy_Model.rootPos","_name":"TargetPos","_id":"5210d568-2876-46c6-aa4b-9e8916573c39","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Vector3,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"WanderPosList":{"_value":[1,2,3,4,5,6,7],"_name":"WanderPosList","_id":"edd51913-6846-4a15-910d-dcc9d562d78c","$type":"NodeCanvas.Framework.Variable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"Distance":{"_name":"Distance","_id":"82bc8ab2-5d19-4314-8d16-2549cb6e9bc6","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}}}'
   _objectReferences:
   - {fileID: 0}
@@ -5466,6 +5467,9 @@ MonoBehaviour:
     - {fileID: 485726651}
     - {fileID: 1849093182}
     - {fileID: 517638403}
+  - _json: '{"_name":"Distance","_id":"82bc8ab2-5d19-4314-8d16-2549cb6e9bc6","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references: []
 --- !u!114 &1642680471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5479,12 +5483,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _serializedExposedParameters: []
-  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_nestedBT":{"_value":1},"_name":"\u5de1\u903b","_tag":"patrol","_position":{"x":524.0,"y":87.0},"$type":"NodeCanvas.StateMachines.NestedBTState","$id":"0"},{"_nestedBT":{"_value":2},"_name":"\u8ffd\u51fb","_tag":"pursue","_position":{"x":737.0,"y":277.0},"$type":"NodeCanvas.StateMachines.NestedBTState","$id":"1"},{"_conditionList":{"conditions":[{"variable":{"_name":"GB/Player","_targetVariableID":"2ca7f6c9-d3ae-4ce7-9859-b8dac5ceb363"},"_invert":true,"$type":"NodeCanvas.Tasks.Conditions.CheckNull"}]},"_actionList":{"actions":[{"log":{"_value":"fsm\u5e76\u884c"},"_isDisabled":true,"$type":"NodeCanvas.Tasks.Actions.DebugLogText"},{"target":{"_name":"GB/Player","_targetVariableID":"2ca7f6c9-d3ae-4ce7-9859-b8dac5ceb363"},"saveAs":{"_name":"Distance","_targetVariableID":"69281e3c-5ae7-4c9b-b2e7-e007ad089522"},"$type":"NodeCanvas.Tasks.Actions.GetDistance"}]},"_repeatStateActions":true,"_position":{"x":1000.0,"y":292.0},"$type":"NodeCanvas.StateMachines.ConcurrentState"}],"connections":[{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{"Distance":{"_name":"Distance","_id":"69281e3c-5ae7-4c9b-b2e7-e007ad089522","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
-    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}}}}'
+  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_nestedBT":{"_value":1},"_name":"\u5de1\u903b","_tag":"patrol","_position":{"x":530.0,"y":83.0},"$type":"NodeCanvas.StateMachines.NestedBTState","$id":"0"},{"_nestedBT":{"_value":2},"successEvent":"PursueSuccess","failureEvent":"PursueFailure","_name":"\u8ffd\u51fb","_tag":"pursue","_position":{"x":697.0,"y":226.0},"$type":"NodeCanvas.StateMachines.NestedBTState","$id":"1"},{"_nestedBT":{"_value":3},"_name":"\u653b\u51fb","_tag":"attack","_position":{"x":843.0,"y":427.0},"$type":"NodeCanvas.StateMachines.NestedBTState","$id":"2"},{"_conditionList":{"conditions":[{"variable":{"_name":"GB/Player","_targetVariableID":"2ca7f6c9-d3ae-4ce7-9859-b8dac5ceb363"},"_invert":true,"$type":"NodeCanvas.Tasks.Conditions.CheckNull"}]},"_actionList":{"actions":[{"target":{"_name":"GB/Player","_targetVariableID":"2ca7f6c9-d3ae-4ce7-9859-b8dac5ceb363"},"saveAs":{"_name":"Distance","_targetVariableID":"82bc8ab2-5d19-4314-8d16-2549cb6e9bc6"},"$type":"NodeCanvas.Tasks.Actions.GetDistance"}]},"_repeatStateActions":true,"_position":{"x":1001.0,"y":292.0},"$type":"NodeCanvas.StateMachines.ConcurrentState"}],"connections":[{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"eventName":{"_value":"PursueSuccess"},"$type":"NodeCanvas.Tasks.Conditions.CheckEvent"},"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"eventName":{"_value":"PursueFailure"},"$type":"NodeCanvas.Tasks.Conditions.CheckEvent"},"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
   _boundGraphObjectReferences:
   - {fileID: 0}
   - {fileID: 11400000, guid: 824ccbbc9f122124387482317eaae381, type: 2}
   - {fileID: 11400000, guid: 04a8c82355e4d8d48a4ff4196daba454, type: 2}
+  - {fileID: 11400000, guid: 525e1e659f284c243bdf854783b6fa8f, type: 2}
   _boundGraphSource:
     _version: 3.21
     _category: 
@@ -5507,7 +5511,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1642680469}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 2.58}
+  m_LocalPosition: {x: -2.1, y: 0, z: 2.58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 930751148}
@@ -5536,7 +5540,7 @@ MonoBehaviour:
   keepDistance: 0.1
   delay: 0
   wanderSpeed: 5
-  seekDistance: 0
+  seekDistance: 5
   rootPos: {x: 0, y: 0, z: 0}
   pursueSpeed: 0
   pursueDistance: 0
@@ -5875,7 +5879,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1814922972}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.61, y: 10.34, z: 48.66}
+  m_LocalPosition: {x: 30.98, y: 0, z: -3.24}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5946,7 +5950,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1908966378
 Transform:
   m_ObjectHideFlags: 0
