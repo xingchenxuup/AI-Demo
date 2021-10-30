@@ -5438,6 +5438,9 @@ MonoBehaviour:
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"WanderPosList":{"_value":[1,2,3,4,5,6,7],"_name":"WanderPosList","_id":"edd51913-6846-4a15-910d-dcc9d562d78c","$type":"NodeCanvas.Framework.Variable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"Distance":{"_name":"Distance","_id":"82bc8ab2-5d19-4314-8d16-2549cb6e9bc6","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"AttackDis":{"_propertyPath":"Enemy_Model.attackDistance","_name":"AttackDis","_id":"20b0cddd-d33e-4f01-9080-259d2ff65626","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"CoolDown":{"_propertyPath":"Enemy_Model.attackCooling","_name":"CoolDown","_id":"9ee0fea4-23d8-4d89-9b33-17c5b5e82342","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"PursueDis":{"_propertyPath":"Enemy_Model.pursueDistance","_name":"PursueDis","_id":"b3338606-9040-4674-9e10-990584e6fdc9","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}}}'
   _objectReferences:
   - {fileID: 0}
@@ -5468,6 +5471,15 @@ MonoBehaviour:
     - {fileID: 1849093182}
     - {fileID: 517638403}
   - _json: '{"_name":"Distance","_id":"82bc8ab2-5d19-4314-8d16-2549cb6e9bc6","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references: []
+  - _json: '{"_propertyPath":"Enemy_Model.attackDistance","_name":"AttackDis","_id":"20b0cddd-d33e-4f01-9080-259d2ff65626","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references: []
+  - _json: '{"_propertyPath":"Enemy_Model.attackCooling","_name":"CoolDown","_id":"9ee0fea4-23d8-4d89-9b33-17c5b5e82342","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references: []
+  - _json: '{"_propertyPath":"Enemy_Model.pursueDistance","_name":"PursueDis","_id":"b3338606-9040-4674-9e10-990584e6fdc9","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
     _references: []
 --- !u!114 &1642680471
@@ -5538,10 +5550,10 @@ MonoBehaviour:
   wanderSpeed: 5
   seekDistance: 5
   rootPos: {x: 0, y: 0, z: 0}
-  pursueSpeed: 0
-  pursueDistance: 0
+  pursueSpeed: 5
+  pursueDistance: 10
   attackCooling: 5
-  attackDistance: 0
+  attackDistance: 5
 --- !u!195 &1642680474
 NavMeshAgent:
   m_ObjectHideFlags: 0
